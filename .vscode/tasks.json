@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build with GLAD",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/create_window.cpp",
+                "${workspaceFolder}/glad.c",
+                "-o",
+                "${workspaceFolder}/OpenGL_Learning",
+                "-I${workspaceFolder}/include",
+                "-lGL",
+                "-lglfw",
+                "-ldl"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiles create_window.cpp and glad.c"
+        }
+    ]
+}
