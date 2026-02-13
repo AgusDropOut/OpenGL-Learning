@@ -10,7 +10,7 @@
                 "${file}",
                 "${workspaceFolder}/glad.c",
                 "-o",
-                "${workspaceFolder}/${fileBasenameNoExtension}",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-I${workspaceFolder}/include",
                 "-lGL",
                 "-lglfw",
@@ -26,7 +26,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compiles the active C++ file and glad.c"
+            "detail": "Compiles the active C++ file and glad.c into its current folder"
         }
     ]
 }
