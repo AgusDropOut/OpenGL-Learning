@@ -3,14 +3,14 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Build with GLAD",
+            "label": "Build Current File with GLAD",
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/create_window.cpp",
+                "${file}",
                 "${workspaceFolder}/glad.c",
                 "-o",
-                "${workspaceFolder}/OpenGL_Learning",
+                "${workspaceFolder}/${fileBasenameNoExtension}",
                 "-I${workspaceFolder}/include",
                 "-lGL",
                 "-lglfw",
@@ -26,7 +26,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compiles create_window.cpp and glad.c"
+            "detail": "Compiles the active C++ file and glad.c"
         }
     ]
 }
